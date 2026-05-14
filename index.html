@@ -15,16 +15,6 @@
     </header>
 
     
-    <section id="login">
-        <h2>Login</h2>
-        <form id="loginForm">
-            <input type="text" id="username" placeholder="Username">
-            <input type="password" id="password" placeholder="Password">
-            <button type="button" id="loginButton">Login</button>
-        </form>
-    </section>
-
-    
     <section id="storage">
         <h2>Pré-visualização do armazenamento</h2>
         <p>Veja suas fotos e vídeos com mais clareza e organização.</p>
@@ -54,6 +44,27 @@
             <button id="nextBtn">Next</button>
         </div>
     </section>
-<source src="script.js" type="">
+
+<script>
+    
+    document.getElementById('storage').style.display = 'none';
+    document.getElementById('filters').style.display = 'none';
+    document.getElementById('slideshow').style.display = 'none';
+
+       const usuario = prompt('digite o usuario');
+    const senha = prompt('digite a senha');
+    
+    if (usuario === 'admin' && senha === '123') {
+        document.getElementById('storage').style.display = 'block';
+        document.getElementById('filters').style.display = 'block';
+        document.getElementById('slideshow').style.display = 'block';
+        alert('Login feito');
+    } else {
+        alert('Usuario ou senha esta errado');
+        
+        location.reload();
+    }
+</script>
+
 </body>
 </html>
