@@ -45,26 +45,7 @@
         </div>
     </section>
 
-<script>
-    
-    document.getElementById('storage').style.display = 'none';
-    document.getElementById('filters').style.display = 'none';
-    document.getElementById('slideshow').style.display = 'none';
-
-       const usuario = prompt('digite o usuario');
-    const senha = prompt('digite a senha');
-    
-    if (usuario === 'admin' && senha === '123') {
-        document.getElementById('storage').style.display = 'block';
-        document.getElementById('filters').style.display = 'block';
-        document.getElementById('slideshow').style.display = 'block';
-        alert('Login feito');
-    } else {
-        alert('Usuario ou senha esta errado');
-        
-        location.reload();
-    }
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>

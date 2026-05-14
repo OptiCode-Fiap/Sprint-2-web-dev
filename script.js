@@ -1,26 +1,26 @@
-const botaoLogin = document.getElementById('loginButton');
-const secaoLogin = document.getElementById('login');
-const secaoArmazenamento = document.getElementById('storage');
-const secaoFiltros = document.getElementById('filters');
-const secaoSlideshow = document.getElementById('slideshow');
-
-secaoArmazenamento.style.display = 'none';
-secaoFiltros.style.display = 'none';
-secaoSlideshow.style.display = 'none';
-
-botaoLogin.addEventListener('click', () => {
-    const usuario = prompt('Digite seu usuário:');
-    const senha = prompt('Digite sua senha:');
     
-    if (usuario === 'admin' && senha === '123') {
-        secaoLogin.style.display = 'none';
-        secaoArmazenamento.style.display = 'block';
-        secaoFiltros.style.display = 'block';
-        secaoSlideshow.style.display = 'block';
-        alert('Login feito!');
+    document.getElementById('storage').style.display = 'none';
+    document.getElementById('filters').style.display = 'none';
+    document.getElementById('slideshow').style.display = 'none';
+
+      
+        const usuario = prompt('digite o usuario');
+      
+        
+    if (usuario.length < 3){
+        alert('Usuario deve ter mais de 3 caracteres');
+        location.reload();
     } else {
-        alert('Usuário ou senha errados!');
-    }
-});
+        const senha = prompt('digite a senha');
+    if (senha.length < 4){
+        alert('A senha deve ter mais de 4 caracteres');  
+        location.reload(); 
+    } 
 
-
+    if (usuario.length >= 3 && senha.length >= 4) {
+        document.getElementById('storage').style.display = 'block';
+        document.getElementById('filters').style.display = 'block';
+        document.getElementById('slideshow').style.display = 'block';
+        alert('Login feito');
+    }}
+     
